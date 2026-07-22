@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Trần Bá Hiếu</title>
+
+<meta name="theme-color" content="#050505">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- Aurora -->
+
+<div class="aurora"></div>
+
+<!-- Particle -->
+
+<canvas id="particles"></canvas>
+
+<!-- Welcome -->
+
+<div id="loader">
+
+    <h1>WELCOME</h1>
+
+    <h2>
+
+        Trần Bá Hiếu
+
+        <span class="verify">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+        </span>
+
+    </h2>
+
+    <div class="loading-bar">
+
+        <div class="loading"></div>
+
+    </div>
+
+</div>
+
+<!-- Main -->
+
+<div id="app">
+
+<div class="glass">
+
+<!-- Avatar -->
+
+<div class="avatar-ring">
+
+<img
+src="assets/avatar.jpg"
+class="avatar">
+
+</div>
+
+<!-- Name -->
+
+<h1 class="name">
+
+Trần Bá Hiếu
+
+<span class="verify">
+
+<i class="fa-solid fa-circle-check"></i>
+
+</span>
+
+</h1>
+
+<p class="job">
+
+Creative • Developer
+
+</p>
+<!-- Social Buttons -->
+
+<div class="social">
+
+    <a href="#" class="social-btn facebook" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+        <span>Facebook</span>
+    </a>
+
+    <a href="#" class="social-btn tiktok" target="_blank">
+        <i class="fab fa-tiktok"></i>
+        <span>TikTok</span>
+    </a>
+
+    <a href="#" class="social-btn instagram" target="_blank">
+        <i class="fab fa-instagram"></i>
+        <span>Instagram</span>
+    </a>
+
+    <a href="#" class="social-btn telegram" target="_blank">
+        <i class="fab fa-telegram-plane"></i>
+        <span>Telegram</span>
+    </a>
+
+    <a href="#" class="social-btn spotify" target="_blank">
+        <i class="fab fa-spotify"></i>
+        <span>Spotify</span>
+    </a>
+
+    <button id="bankButton" class="social-btn bank">
+        <i class="fa-solid fa-building-columns"></i>
+        <span>Bank</span>
+    </button>
+
+</div>
+
+<!-- Music Player -->
+
+<div class="music-box">
+
+    <audio id="music" src="assets/music.mp3"></audio>
+
+    <button id="playButton">
+        <i class="fa-solid fa-play"></i>
+    </button>
+
+    <div class="music-info">
+
+        <h3>Now Playing</h3>
+
+        <p>Trần Bá Hiếu</p>
+
+    </div>
+
+</div>
+
+<!-- Footer -->
+
+<div class="footer">
+
+    © Tran Ba Hieu 2026
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Popup QR Bank -->
+
+<div id="bankPopup">
+
+    <div class="popup-content">
+
+        <span id="closePopup">&times;</span>
+
+        <img
+        src="assets/qr-bank.png"
+        alt="QR Bank">
+
+        <h3>Quét mã QR để chuyển khoản</h3>
+
+    </div>
+
+</div>
+
+<!-- Heart Effect -->
+
+<div id="heartContainer"></div>
+
+<!-- Cursor Glow -->
+
+<div id="cursorGlow"></div>
+
+<!-- Script -->
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

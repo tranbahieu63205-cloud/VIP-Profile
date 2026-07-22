@@ -1,0 +1,879 @@
+/* =====================================
+   TRAN BA HIEU - VIP PROFILE
+   style.css (Part 1)
+====================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    font-family:'Poppins',sans-serif;
+    background:#050505;
+    color:#fff;
+}
+
+/* Aurora Background */
+
+.aurora{
+    position:fixed;
+    inset:0;
+    z-index:-3;
+
+    background:
+    radial-gradient(circle at 20% 20%,#00f7ff55,transparent 40%),
+    radial-gradient(circle at 80% 25%,#7c3aed55,transparent 35%),
+    radial-gradient(circle at 50% 80%,#ff008855,transparent 45%),
+    #050505;
+
+    animation:aurora 12s ease-in-out infinite alternate;
+}
+
+@keyframes aurora{
+
+0%{
+
+filter:hue-rotate(0deg);
+
+transform:scale(1);
+
+}
+
+100%{
+
+filter:hue-rotate(140deg);
+
+transform:scale(1.15);
+
+}
+
+}
+
+/* Particle Canvas */
+
+#particles{
+
+position:fixed;
+
+inset:0;
+
+z-index:-2;
+
+}
+
+/* Loader */
+
+#loader{
+
+position:fixed;
+
+inset:0;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+background:#050505;
+
+z-index:9999;
+
+transition:1s;
+
+}
+
+#loader h1{
+
+font-size:60px;
+
+font-weight:700;
+
+letter-spacing:8px;
+
+text-shadow:
+
+0 0 10px cyan,
+
+0 0 30px cyan,
+
+0 0 60px cyan;
+
+}
+
+#loader h2{
+
+margin-top:18px;
+
+font-weight:400;
+
+opacity:.85;
+
+}
+
+.loading-bar{
+
+margin-top:35px;
+
+width:280px;
+
+height:8px;
+
+background:#222;
+
+border-radius:30px;
+
+overflow:hidden;
+
+}
+
+.loading{
+
+height:100%;
+
+width:0;
+
+background:linear-gradient(
+90deg,
+cyan,
+#00ff99,
+cyan);
+
+animation:loading 2.6s linear forwards;
+
+}
+
+@keyframes loading{
+
+100%{
+
+width:100%;
+
+}
+
+}
+
+/* Main */
+
+#app{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+width:100%;
+
+height:100vh;
+
+}
+
+/* Glass Card */
+
+.glass{
+
+width:430px;
+
+max-width:90%;
+
+padding:40px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(22px);
+
+border:1px solid rgba(255,255,255,.12);
+
+box-shadow:
+
+0 0 35px rgba(0,255,255,.18);
+
+text-align:center;
+
+}
+
+/* Avatar RGB */
+
+.avatar-ring{
+
+width:180px;
+
+height:180px;
+
+margin:auto;
+
+padding:6px;
+
+border-radius:50%;
+
+background:conic-gradient(
+red,
+orange,
+yellow,
+lime,
+cyan,
+blue,
+violet,
+red);
+
+animation:rgbSpin 4s linear infinite;
+
+box-shadow:
+
+0 0 25px cyan,
+
+0 0 60px #00f7ff;
+
+}
+
+.avatar{
+
+width:100%;
+
+height:100%;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:5px solid #111;
+
+}
+
+@keyframes rgbSpin{
+
+100%{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+/* Name */
+
+.name{
+
+margin-top:25px;
+
+font-size:34px;
+
+font-weight:700;
+
+}
+
+.verify{
+
+color:#29b6ff;
+
+text-shadow:
+
+0 0 12px #29b6ff,
+
+0 0 25px #29b6ff;
+
+margin-left:6px;
+
+}
+
+.job{
+
+margin-top:10px;
+
+font-size:16px;
+
+opacity:.8;
+
+letter-spacing:2px;
+
+}
+/* ===============================
+   SOCIAL BUTTONS
+================================ */
+
+.social{
+    margin-top:30px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.social-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    height:55px;
+
+    border-radius:18px;
+
+    text-decoration:none;
+
+    color:#fff;
+
+    font-weight:600;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    backdrop-filter:blur(15px);
+
+    transition:.35s;
+
+    cursor:pointer;
+
+}
+
+.social-btn i{
+
+font-size:20px;
+
+}
+
+.social-btn:hover{
+
+transform:translateY(-5px) scale(1.03);
+
+box-shadow:
+
+0 0 25px rgba(0,255,255,.45);
+
+border-color:cyan;
+
+}
+
+/* Brand Colors */
+
+.facebook:hover{
+
+background:#1877f2;
+
+}
+
+.tiktok:hover{
+
+background:#000;
+
+box-shadow:
+
+0 0 20px #25F4EE,
+
+0 0 40px #FE2C55;
+
+}
+
+.instagram:hover{
+
+background:linear-gradient(
+45deg,
+#f58529,
+#dd2a7b,
+#8134af,
+#515bd4);
+
+}
+
+.telegram:hover{
+
+background:#229ED9;
+
+}
+
+.spotify:hover{
+
+background:#1DB954;
+
+}
+
+.bank:hover{
+
+background:#00b894;
+
+}
+
+/* ==========================
+     MUSIC PLAYER
+========================== */
+
+.music-box{
+
+margin-top:35px;
+
+padding:18px;
+
+border-radius:20px;
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.12);
+
+display:flex;
+
+align-items:center;
+
+gap:18px;
+
+backdrop-filter:blur(18px);
+
+}
+
+#playButton{
+
+width:60px;
+
+height:60px;
+
+border:none;
+
+border-radius:50%;
+
+background:linear-gradient(
+45deg,
+cyan,
+#00ff95);
+
+color:#111;
+
+font-size:22px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+#playButton:hover{
+
+transform:scale(1.1);
+
+box-shadow:
+
+0 0 25px cyan,
+
+0 0 45px cyan;
+
+}
+
+.music-info{
+
+flex:1;
+
+text-align:left;
+
+}
+
+.music-info h3{
+
+font-size:18px;
+
+font-weight:600;
+
+}
+
+.music-info p{
+
+opacity:.7;
+
+font-size:14px;
+
+margin-top:4px;
+
+}
+
+/* ======================
+      FOOTER
+====================== */
+
+.footer{
+
+margin-top:28px;
+
+opacity:.55;
+
+font-size:14px;
+
+letter-spacing:1px;
+
+}
+
+/* ======================
+      BANK POPUP
+====================== */
+
+#bankPopup{
+
+position:fixed;
+
+inset:0;
+
+background:rgba(0,0,0,.75);
+
+display:none;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:999;
+
+}
+
+.popup-content{
+
+width:340px;
+
+max-width:90%;
+
+background:#111;
+
+padding:25px;
+
+border-radius:25px;
+
+text-align:center;
+
+border:1px solid rgba(255,255,255,.15);
+
+box-shadow:
+
+0 0 30px rgba(0,255,255,.35);
+
+position:relative;
+
+}
+
+.popup-content img{
+
+width:220px;
+
+border-radius:15px;
+
+margin:15px 0;
+
+}
+
+#closePopup{
+
+position:absolute;
+
+top:15px;
+
+right:18px;
+
+font-size:28px;
+
+cursor:pointer;
+
+color:#fff;
+
+transition:.3s;
+
+}
+
+#closePopup:hover{
+
+color:cyan;
+
+transform:rotate(90deg);
+
+}
+/* ===============================
+   VIP PROFILE - STYLE.CSS (PART 3)
+   Animation • Cursor • Hearts
+================================ */
+
+/* Avatar Pulse */
+
+.avatar-ring{
+    position:relative;
+}
+
+.avatar-ring::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-12px;
+
+    border-radius:50%;
+
+    border:2px solid rgba(0,255,255,.45);
+
+    animation:pulse 2.5s infinite;
+
+}
+
+@keyframes pulse{
+
+0%{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+70%{
+
+transform:scale(1.18);
+
+opacity:0;
+
+}
+
+100%{
+
+opacity:0;
+
+}
+
+}
+
+/* Floating Card */
+
+.glass{
+
+animation:float 5s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+}
+
+/* Cursor Glow */
+
+#cursorGlow{
+
+position:fixed;
+
+width:26px;
+
+height:26px;
+
+border-radius:50%;
+
+pointer-events:none;
+
+background:rgba(0,255,255,.45);
+
+filter:blur(8px);
+
+transform:translate(-50%,-50%);
+
+z-index:99999;
+
+transition:
+left .05s linear,
+top .05s linear;
+
+}
+
+/* Heart Container */
+
+#heartContainer{
+
+position:fixed;
+
+inset:0;
+
+pointer-events:none;
+
+overflow:hidden;
+
+z-index:9998;
+
+}
+
+.heart{
+
+position:absolute;
+
+font-size:22px;
+
+animation:heartFly 1.8s linear forwards;
+
+}
+
+@keyframes heartFly{
+
+0%{
+
+opacity:1;
+
+transform:
+translateY(0)
+scale(.5);
+
+}
+
+100%{
+
+opacity:0;
+
+transform:
+translateY(-180px)
+scale(1.8)
+rotate(30deg);
+
+}
+
+}
+
+/* Loader Fade */
+
+.loader-hide{
+
+opacity:0;
+
+visibility:hidden;
+
+pointer-events:none;
+
+}
+
+/* Button Ripple */
+
+.social-btn{
+
+overflow:hidden;
+
+position:relative;
+
+}
+
+.social-btn span.ripple{
+
+position:absolute;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.45);
+
+transform:scale(0);
+
+animation:ripple .6s linear;
+
+pointer-events:none;
+
+}
+
+@keyframes ripple{
+
+to{
+
+transform:scale(7);
+
+opacity:0;
+
+}
+
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+.glass{
+
+width:92%;
+
+padding:28px;
+
+}
+
+.avatar-ring{
+
+width:150px;
+
+height:150px;
+
+}
+
+.name{
+
+font-size:28px;
+
+}
+
+.job{
+
+font-size:14px;
+
+}
+
+.social{
+
+grid-template-columns:1fr;
+
+}
+
+.music-box{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.music-info{
+
+text-align:center;
+
+}
+
+}
+
+/* Small Phone */
+
+@media (max-width:380px){
+
+.name{
+
+font-size:24px;
+
+}
+
+.avatar-ring{
+
+width:130px;
+
+height:130px;
+
+}
+
+.social-btn{
+
+height:50px;
+
+font-size:14px;
+
+}
+
+}
